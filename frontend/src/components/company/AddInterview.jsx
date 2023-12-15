@@ -1,0 +1,73 @@
+import { useFormik } from "formik";
+import UseAppContext from "../AppContext"
+import Swal from "sweetalert2";
+import { useState } from "react";
+
+
+const AddInterview = () => {
+  const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('company')));
+  const {setinterview} = UseAppContext();
+  const interviewForm = useFormik({
+    initialValues:{
+      designation : '',
+      company : currentUser._id,
+      experience: '',
+      location : '',
+      requirement : '',
+      createdAt : '',
+     
+    },
+    onSubmit: async(values) => {
+      console.table(values);
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/interview/add`,{
+        method: 'POST',
+        body : JSON.stringify(values),
+        headers : {
+          'Content-type' : 'application/json'
+        }
+      })
+      console.log(true);
+      if(res.status === 200){
+        Swal.fire({
+          icon : 'success',
+          title : 'Interview Success',
+          text : ' Congratulation! You are successfully enrolled for interview'
+        })
+      
+        const data = await res.json()
+        sessionStorage.setItem('Interview', JSON.stringify(data))
+      } else if(res.status === 400){
+        Swal.fire({
+          icon : 'Error',
+          title : ' Failed', 
+          text : 'Oops!!😔😔😔😔 You should try again'
+        })
+      }
+    }
+  }) 
+
+  return (
+    <div>
+      <div className="col-md-4 col-md-4 d-flex mx-auto align-items-center vh-100 pt-5 ">
+        <div className="card w-100">
+          <h3 className='text-center my-3 display-6 ' style={{fontWeight:'400'}}>Add Interview</h3>
+          <div className="card-body">
+          <form onSubmit={interviewForm.handleSubmit} >
+            <input type="text" id="designation" onChange={interviewForm.handleChange} value={interviewForm.values.designation}  placeholder='Designation'  className='form-control mb-3' />
+            {/* <input type="text"  id="company" onChange={interviewForm.handleChange} value={interviewForm.values.company} placeholder='Company'  className='form-control mb-3' /> */}
+            {/* <input type="text"  id="name" onChange={interviewForm.handleChange} value={interviewForm.values.name} placeholder='Name'  className='form-control mb-3' /> */}
+            <input type="text"  id="experience" onChange={interviewForm.handleChange} value={interviewForm.values.experience} placeholder='Experience'  className='form-control mb-3' />
+            <input type="text"  id="location" onChange={interviewForm.handleChange} value={interviewForm.values.location} placeholder='Location'  className='form-control mb-3' />
+            <label htmlFor="" className='my-1'>Requirement</label>
+            <textarea name=""  id="requirement" onChange={interviewForm.handleChange} value={interviewForm.values.requirement}  cols="30" rows="3 " className='form-control mb-3'></textarea>
+            <input type="date"  id="createdAt" onChange={interviewForm.handleChange} value={interviewForm.values.createdAt} placeholder='Created At' className='form-control mb-3'/>
+            <button className='btn btn-outline-success w-100' type="submit"> Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default AddInterview

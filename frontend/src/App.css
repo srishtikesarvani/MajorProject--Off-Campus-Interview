@@ -1,0 +1,46 @@
+*{
+    font-family: roboto;
+}
+
+
+
+.main{
+    background-image: url('../public/wall3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-height: 100vh;
+    background-position: center;
+    
+}
+.nav-item .active{
+    border: 3px solid darkgreen;
+    border-radius: 5px;
+    color: darkgreen !important;
+    font-weight: bold;
+  }
+  .nav-item{
+    font-weight: bold;
+    color: black;
+    font-size: 1.3rem;
+  }
+  .card-img-top{
+    width: 60%;
+   
+    margin: 0 auto;
+    padding: 2re;
+  }
+.picture{
+  background-image: url('../public/img.jpg');
+  border-radius: 5px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 75vh;
+  background-position: center;
+}
+ .card-img{
+  height: 100px;
+  object-fit: contain;
+ }
+ .para{
+  line-height: 1rem;
+ }
