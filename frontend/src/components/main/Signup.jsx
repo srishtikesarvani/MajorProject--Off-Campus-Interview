@@ -46,7 +46,7 @@ const Signup = () => {
           className="card w-100 shadow"
           style={{ border: "none", borderRadius: "5px" }}
         >
-          <h3 className="text-center mt-4 text-dask fw-bold"> Sign Up </h3>
+          <h3 className="text-center mt-4 text-dark fw-bold"> Sign Up </h3>
           <div className="card-body ">
            <div className="row">
             <div className="col-md-6">
