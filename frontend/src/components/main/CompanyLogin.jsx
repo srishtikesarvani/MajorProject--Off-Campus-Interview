@@ -2,9 +2,11 @@ import React from 'react'
 import UseAppContext from '../AppContext';
 import { useFormik } from 'formik';
 import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 const CompanyLogin = () => {
   const { setloggedin } = UseAppContext()
+  const navigate = useNavigate();
   const loginForm = useFormik({
     initialValues :{
       email : '',
@@ -34,7 +36,7 @@ const CompanyLogin = () => {
      setloggedin(true);
      const data = await res.json()
      sessionStorage.setItem('company', JSON.stringify(data))
-   
+     navigate('/company/addinterview')
 }else if(res.status === 400)
   {
     Swal.fire({

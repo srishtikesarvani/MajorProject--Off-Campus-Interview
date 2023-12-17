@@ -14,7 +14,7 @@ const AddInterview = () => {
       experience: '',
       location : '',
       requirement : '',
-      createdAt : '',
+      createdAt : new Date(),
      
     },
     onSubmit: async(values) => {
@@ -60,7 +60,6 @@ const AddInterview = () => {
             <input type="text"  id="location" onChange={interviewForm.handleChange} value={interviewForm.values.location} placeholder='Location'  className='form-control mb-3' />
             <label htmlFor="" className='my-1'>Requirement</label>
             <textarea name=""  id="requirement" onChange={interviewForm.handleChange} value={interviewForm.values.requirement}  cols="30" rows="3 " className='form-control mb-3'></textarea>
-            <input type="date"  id="createdAt" onChange={interviewForm.handleChange} value={interviewForm.values.createdAt} placeholder='Created At' className='form-control mb-3'/>
             <button className='btn btn-outline-success w-100' type="submit"> Submit</button>
             </form>
           </div>

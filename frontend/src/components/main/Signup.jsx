@@ -49,7 +49,7 @@ const Signup = () => {
           <h3 className="text-center mt-4 text-dark fw-bold"> Sign Up </h3>
           <div className="card-body ">
            <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-6 my-auto">
             <form onSubmit={signupForm.handleSubmit}>
               <input
                 type="text" id="name" onChange={signupForm.handleChange} value={signupForm.values.name}
@@ -77,8 +77,9 @@ const Signup = () => {
                 <span className="text-danger fw-bold"> privacy </span>and{" "}
                 <span className="text-danger fw-bold">policy</span>
               </span>
-              <button
-                className="btn btn-outline-success w-100  my-4 "
+             <div className="mt-5">
+             <button
+                className="btn btn-success w-100   "
                 style={{
                   fontWeight: "400",
                   fontSize: "20px",
@@ -88,10 +89,14 @@ const Signup = () => {
               >
                 Sign up
               </button>
+             </div>
             </form>
             </div>
             <div className="col-md-6">
-              <img src="../public/cocacola.png " className="img-fluid" alt="" />
+              {/* <img src="../public/signin.jpg " className="img-fluid image " alt="" /> */}
+              <div className="image">
+
+              </div>
             </div>
            </div>
           </div>

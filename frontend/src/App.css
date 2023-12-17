@@ -44,3 +44,21 @@
  .para{
   line-height: 1rem;
  }
+ .image{
+  background-image: url('../public/signin2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 75vh;
+  background-position: center;
+  border-radius: 5px;
+  /* width: 100%; */
+ }
+ .image2{
+  background-image: url('../public/login.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 50vh;
+  background-position: center;
+  border-radius: 5px;
+  /* width: 100%; */
+ }

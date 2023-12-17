@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import './App.css'
 import Main from './components/main';
 import Home from './components/main/Home';
@@ -33,6 +33,7 @@ function App() {
       <BrowserRouter>
       <AppProvider>
         <Routes>
+            <Route path='/' element={<Navigate to="/main/home" />} />
             <Route path='main' element={<Main />} >
               <Route path='home' element={<Home />} /> 
               <Route path='login' element={<Login />} /> 
@@ -45,7 +46,7 @@ function App() {
               <Route path='companylogin' element={<CompanyLogin/>} /> 
               <Route path='browseinterview' element={<BrowseInterview/>} /> 
               <Route path='subscribe' element={<Subscribe/>} /> 
-              <Route path='interviewdetail' element={<InterviewDetail/>} /> 
+              <Route path='interviewdetail/:id' element={<InterviewDetail/>} /> 
               
             </Route>
             <Route path='company' element={<Company />} >

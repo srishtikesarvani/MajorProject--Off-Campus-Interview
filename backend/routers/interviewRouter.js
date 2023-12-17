@@ -36,7 +36,17 @@ router.put('/update/:id', (req, res)=>{
     })
 })
 router.get('/getbyid/:id', (req, res) => {
-   Model.findById(req.params.id)
+   Model.findById(req.params.id).populate('company')
+   .then((result)=>{
+    res.json(result)
+   }).catch((err)=>{
+
+    res.status(500).json(err)
+   })
+})
+
+router.get('/getbycompany/:id', (req, res) => {
+   Model.find({ company :  req.params.id})
    .then((result)=>{
     res.json(result)
    }).catch((err)=>{

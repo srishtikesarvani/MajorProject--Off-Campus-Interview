@@ -5,6 +5,14 @@ const myschema = new Schema({
    requirement:String,
    location:String,
    createdAt:Date,
-   apply:String
+   apply:String,
+   experience:String,
+   salary:Text,
+   management:String,
+   skill:String,
+   noticePeriod:String,
+
+
+   
 })
 module.exports= model( 'Interview',myschema)

@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react'
 
 const ManageInterview = () => {
   const [interviewlist, setinterviewlist] = useState([]);
+  const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('company')));
+
+
   const fetchinterviewData  = async() =>{
-    const res = await fetch(`${import.meta.env.VITE_API_URL}/interview/getall`);
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/interview/getbycompany/`+currentUser._id);
     console.log(res.status);
     const data = await res.json();
     setinterviewlist(data)
@@ -35,7 +38,7 @@ const ManageInterview = () => {
             <th> S. no.</th>
             <th>ID</th>
             <th>Designation</th>
-           <th>Company</th>
+           {/* <th>Company</th> */}
             {/* <th>Name </th> */}
             <th>Location</th>
             <th>Experience</th>
@@ -49,7 +52,7 @@ const ManageInterview = () => {
             <td>{index + 1}</td>
             <td>{interview._id}</td>
             <td>{interview.designation}</td>
-            <td>{interview.company}</td>
+            {/* <td>{interview.company.name}</td> */}
             {/* <td>{interview.name}</td> */}
             <td>{interview.location}</td>
             <td>{interview.experience}</td>

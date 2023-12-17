@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -41,6 +41,7 @@ const Navbar = () => {
         
        
       </ul>
+      <Link className="btn btn-primary mx-4 " to={'/main/browseinterview'}> Browse Interview</Link>
     </div>
   </div>
 </nav>
