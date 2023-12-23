@@ -14,6 +14,9 @@ const AddInterview = () => {
       experience: '',
       location : '',
       requirement : '',
+      skill:'',
+      salary:'',
+      noticePeriod:'',
       createdAt : new Date(),
      
     },
@@ -58,7 +61,10 @@ const AddInterview = () => {
             {/* <input type="text"  id="name" onChange={interviewForm.handleChange} value={interviewForm.values.name} placeholder='Name'  className='form-control mb-3' /> */}
             <input type="text"  id="experience" onChange={interviewForm.handleChange} value={interviewForm.values.experience} placeholder='Experience'  className='form-control mb-3' />
             <input type="text"  id="location" onChange={interviewForm.handleChange} value={interviewForm.values.location} placeholder='Location'  className='form-control mb-3' />
-            <label htmlFor="" className='my-1'>Requirement</label>
+            <input type="text"  id="skill" onChange={interviewForm.handleChange} value={interviewForm.values.skill} placeholder='Your Skills'  className='form-control mb-3' />
+            <input type="text"  id="salary" onChange={interviewForm.handleChange} value={interviewForm.values.salary} placeholder='Salary'  className='form-control mb-3' />
+            <input type="text"  id="noticePeriod" onChange={interviewForm.handleChange} value={interviewForm.values.noticePeriod} placeholder='Notice for User Awareness'  className='form-control mb-3' />
+            <label htmlFor="" className='my-1'>Description</label>
             <textarea name=""  id="requirement" onChange={interviewForm.handleChange} value={interviewForm.values.requirement}  cols="30" rows="3 " className='form-control mb-3'></textarea>
             <button className='btn btn-outline-success w-100' type="submit"> Submit</button>
             </form>

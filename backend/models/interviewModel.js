@@ -5,12 +5,11 @@ const myschema = new Schema({
    requirement:String,
    location:String,
    createdAt:Date,
-   apply:String,
+   applyLink:String,
    experience:String,
-   salary:Text,
-   management:String,
+   salary:{type : String, default: 'Not Disclosed'},
    skill:String,
-   noticePeriod:String,
+   noticePeriod:String
 
 
    

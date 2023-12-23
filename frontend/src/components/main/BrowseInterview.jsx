@@ -17,7 +17,8 @@ const BrowseInterview = () => {
   const displaybrowseinterview = () => {
     return browseinterview.map((interview) => {
       return (
-        <div className="card  " style={{ border: "none" }}>
+        <div className="col-md-6">
+          <div className="card  " >
           {/* <img className='card-img' src={} alt="" /> */}
           <div className="card-body">
             <h4>{interview.designation}</h4>
@@ -29,6 +30,7 @@ const BrowseInterview = () => {
             <Link className="btn btn-primary mt-3" to={'/main/interviewdetail/'+interview._id}>View Details</Link>
           </div>
         </div>
+        </div>
       );
     });
   };
@@ -38,13 +40,16 @@ const BrowseInterview = () => {
       <div className="main vh-100">
         <header>
           <div className="container-fluid  ">
-            <div className="container ">
+          <div className="container pt-4">
+            <h3 className="text-center"> Browse Interview Here</h3>
+          </div>
+            <div className="container py-3 ">
               <div className="row justify-content-center py-3">
                 <div className="col-md-8 mx-auto">
                   <div className="input-group" role="search">
                     <div className="dropdown-center">
                       <button
-                        className="btn btn-secondary w-100 dropdown-toggle px-4 py-2"
+                        className="btn btn-primary w-100 dropdown-toggle px-4 py-2"
                         type="button"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
@@ -91,7 +96,7 @@ const BrowseInterview = () => {
                       placeholder="Enter Company Name"
                       aria-label="Search"
                     />
-                    <button className="btn btn-secondary" type="submit">
+                    <button className="btn btn-primary" type="submit">
                       <i class="fa fa-search" aria-hidden="true"></i>
                     </button>
                   </div>
@@ -101,14 +106,15 @@ const BrowseInterview = () => {
           </div>
         </header>
         <header>
-          <div className="container">
+          {/* <div className="container">
             <h3 className="text-center py-5"> Browse Interview Here</h3>
-          </div>
+          </div> */}
         </header>
-        <div className="container">
-          <div className="row">
-            <div className="col-md-3"></div>
-            <div className="col-md-6 ">{displaybrowseinterview()}</div>
+        <div className="container ">
+          <div className="row gy-4 mx-auto">
+            {/* <div className="col-md-3"></div> */}
+            {/* <div className="col-md-6 ">{displaybrowseinterview()}</div> */}
+            {displaybrowseinterview()}
           </div>
         </div>
       </div>

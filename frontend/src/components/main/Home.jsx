@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <div>
-      <div className="main">
+      <div className="main1">
         <div className="container services-item  ">
           <div className="py-5 ">
             <div className="row pt-5 ">
@@ -30,6 +31,14 @@ const Home = () => {
                     <i class="fa fa-search" aria-hidden="true"></i>
                   </button>
                 </form>
+                <div className="container">
+                  <div className="row ">
+                    <div className="col-md-12 text-center">
+                      <Link className="btn btn-success  " to={'/main/companylogin'}> Company Login</Link>
+                      <Link className="btn btn-success  mx-3" to={'/company/addinterview'}>Add Interview </Link>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
