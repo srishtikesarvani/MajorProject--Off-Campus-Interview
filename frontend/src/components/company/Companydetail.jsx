@@ -33,20 +33,20 @@ const Companydetail = () => {
     <div className="col-md-4">
     <div className="col-md-12"><p ><span className='fw-bold  para'>Company Name </span> <span className='text-secondary'>: {companyData.name}</span></p>  </div>
     <div className="col-md-12"><p ><span className='fw-bold  para'>Category</span> <span className='text-secondary'>: {companyData.category}</span></p>  </div>
-    <div className="col-md-12"><p ><span className='fw-bold  para'>Email</span> <span className='text-secondary'>: info@gmail.com</span></p>  </div>
-    <div className="col-md-12"><p ><span className='fw-bold  para'>Location</span> <span className='text-secondary'>: xyz</span></p>  </div>
-    <div className="col-md-12"><p ><span className='fw-bold  para'>Contact No</span> <span className='text-secondary'>: xyz</span></p>  </div>
+    <div className="col-md-12"><p ><span className='fw-bold  para'>Email</span> <span className='text-secondary'>: {companyData.email}</span></p>  </div>
+    <div className="col-md-12"><p ><span className='fw-bold  para'>Location</span> <span className='text-secondary'>: {companyData.location}</span></p>  </div>
+    <div className="col-md-12"><p ><span className='fw-bold  para'>Contact No</span> <span className='text-secondary'>:  {companyData.contact}</span></p>  </div>
     </div>
     <div className="col-md-4">
-    <div className="col-md-12"><p ><span className='fw-bold  para'>No. Of Employee </span> <span className='text-secondary'>: xxxx</span></p>  </div>
-    <div className="col-md-12"><p ><span className='fw-bold  para'>Vision </span> <span className='text-secondary'>: xxxx</span></p>  </div>
-    <div className="col-md-12"><p ><span className='fw-bold  para'>Mission </span> <span className='text-secondary'>: xxxx</span></p>  </div>
+    <div className="col-md-12"><p ><span className='fw-bold  para'>No. Of Employee </span> <span className='text-secondary'>:  {companyData.employee}</span></p>  </div>
+    <div className="col-md-12"><p ><span className='fw-bold  para'>Vision </span> <span className='text-secondary'>:  {companyData.vision}</span></p>  </div>
+    <div className="col-md-12"><p ><span className='fw-bold  para'>Mission </span> <span className='text-secondary'>:  {companyData.mission}</span></p>  </div>
     
     </div>
     <div className="col-md-4">
-    <div className="col-md-12"><p ><span className='fw-bold  para'>Company Description </span> <span className='text-secondary'>: <p>xyz</p> </span></p>  </div>
-    <div className="col-md-12"><p ><span className='fw-bold  para'>Software Description</span> <span className='text-secondary'>: <p>xyz</p> </span></p>  </div>
-    <div className="col-md-12"><p ><span className='fw-bold  para'>Service Description</span> <span className='text-secondary'>: <p>xyz</p> </span></p>  </div>
+    <div className="col-md-12"><p ><span className='fw-bold  para'>Company Description </span> <span className='text-secondary'>: <p> {companyData.description}</p> </span></p>  </div>
+    <div className="col-md-12"><p ><span className='fw-bold  para'>Software Description</span> <span className='text-secondary'>: <p> {companyData.sfdescription}</p> </span></p>  </div>
+    <div className="col-md-12"><p ><span className='fw-bold  para'>Service Description</span> <span className='text-secondary'>: <p> {companyData.servicedescription}</p> </span></p>  </div>
     </div>
     </div>
   </div>

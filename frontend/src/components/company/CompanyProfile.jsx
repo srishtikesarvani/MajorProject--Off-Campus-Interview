@@ -91,8 +91,17 @@ const CompanyProfile = () => {
                 <input type="text" id='name' onChange={profileForm.handleChange} value={profileForm.values.name} placeholder='Company Name' className='form-control mb-3' />
                     <input type="text"  id='location' onChange={profileForm.handleChange} value={profileForm.values.location} placeholder='Location' className='form-control mb-3' />
                     <input type="date"  id='createdat' onChange={profileForm.handleChange} value={profileForm.values.createdat} placeholder='Created At' className='form-control mb-3' />
-                    <label htmlFor="">Description</label>
+                    <input type="date"  id='' onChange={profileForm.handleChange} value={profileForm.values.createdat} placeholder='Created At' className='form-control mb-3' />
+                    <input type="date"  id='createdat' onChange={profileForm.handleChange} value={profileForm.values.createdat} placeholder='Created At' className='form-control mb-3' />
+                    <input type="date"  id='createdat' onChange={profileForm.handleChange} value={profileForm.values.createdat} placeholder='Created At' className='form-control mb-3' />
+                    <input type="date"  id='createdat' onChange={profileForm.handleChange} value={profileForm.values.createdat} placeholder='Created At' className='form-control mb-3' />
+                    <input type="date"  id='createdat' onChange={profileForm.handleChange} value={profileForm.values.createdat} placeholder='Created At' className='form-control mb-3' />
+                    <label htmlFor=""> Company Description</label>
                     <textarea name="" id= " description" onChange={profileForm.handleChange} value={profileForm.values.description} cols="30" rows="5" className='form-control mb-3'></textarea>
+                    <label htmlFor="">Software Description</label>
+                    <textarea name="" id= " sfdescription" onChange={profileForm.handleChange} value={profileForm.values.sfdescription} cols="30" rows="3" className='form-control mb-3'></textarea>
+                    <label htmlFor=""> Service Description</label>
+                    <textarea name="" id= "servicedescription" onChange={profileForm.handleChange} value={profileForm.values.servicedescription} cols="30" rows="3" className='form-control mb-3'></textarea>
                     <button className='btn btn-outline-success w-100' type='submit'>Submit</button>
                     </div>
                   </form>

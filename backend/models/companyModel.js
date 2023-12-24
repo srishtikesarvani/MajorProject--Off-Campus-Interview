@@ -11,7 +11,9 @@ const myschema = new Schema({
    contact:Number,
    employee:String,
    sfdescription:String,
-   servicedescription:String
+   servicedescription:String,
+   vision:String,
+   mission:String
 
 })
 module.exports= model('Company',myschema)
