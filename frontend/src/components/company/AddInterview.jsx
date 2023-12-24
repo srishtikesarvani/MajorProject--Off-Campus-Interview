@@ -17,6 +17,7 @@ const AddInterview = () => {
       skill:'',
       salary:'',
       noticePeriod:'',
+      applyLink:'',
       createdAt : new Date(),
      
     },
@@ -64,6 +65,7 @@ const AddInterview = () => {
             <input type="text"  id="skill" onChange={interviewForm.handleChange} value={interviewForm.values.skill} placeholder='Your Skills'  className='form-control mb-3' />
             <input type="text"  id="salary" onChange={interviewForm.handleChange} value={interviewForm.values.salary} placeholder='Salary'  className='form-control mb-3' />
             <input type="text"  id="noticePeriod" onChange={interviewForm.handleChange} value={interviewForm.values.noticePeriod} placeholder='Notice for User Awareness'  className='form-control mb-3' />
+            <input type="text"  id="applyLink" onChange={interviewForm.handleChange} value={interviewForm.values.applyLink} placeholder='Add your company link'  className='form-control mb-3' />
             <label htmlFor="" className='my-1'>Description</label>
             <textarea name=""  id="requirement" onChange={interviewForm.handleChange} value={interviewForm.values.requirement}  cols="30" rows="3 " className='form-control mb-3'></textarea>
             <button className='btn btn-outline-success w-100' type="submit"> Submit</button>

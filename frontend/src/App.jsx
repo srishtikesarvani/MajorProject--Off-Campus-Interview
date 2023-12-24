@@ -31,7 +31,7 @@ function App() {
       <BrowserRouter>
         <AppProvider>
           <Routes>
-            <Route path="/" element={<Navigate to="/main/home" />} />
+            < Route path="/" element={<Navigate to="/main/home" />} />
             <Route path="main" element={<Main />}>
               <Route path="home" element={<Home />} />
               <Route path="login" element={<Login />} />
