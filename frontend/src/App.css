@@ -62,4 +62,10 @@
   border-radius: 5px;
   /* width: 100%; */
  }
- 
+ .image-card{
+  
+  object-fit: contain;
+  /* min-height: 50vh; */
+  height: 40vh;
+
+ }

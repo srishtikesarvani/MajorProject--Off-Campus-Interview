@@ -45,12 +45,12 @@ function App() {
               <Route path="browseinterview" element={<BrowseInterview />} />
               <Route path="subscribe" element={<Subscribe />} />
               <Route path="interviewdetail/:id" element={<InterviewDetail />} />
+              <Route path="companydetail/:id" element={<Companydetail />} />
             </Route>
             <Route path="company" element={<Company />}>
               <Route path="addinterview" element={<AddInterview />} />
               <Route path="manageinterview" element={<ManageInterview />} />
               <Route path="companyprofile" element={<CompanyProfile />} />
-              <Route path="companydetail" element={<Companydetail />} />
             </Route>
 
             <Route path="user" element={<User />}>

@@ -7,6 +7,11 @@ const myschema = new Schema({
    createdAt:Date,
    email:{type:String, require:true},
    password:{type:String, require:true},
-   location:String
+   location:String,
+   contact:Number,
+   employee:String,
+   sfdescription:String,
+   servicedescription:String
+
 })
 module.exports= model('Company',myschema)
