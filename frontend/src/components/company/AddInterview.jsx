@@ -51,7 +51,7 @@ const AddInterview = () => {
   }) 
 
   return (
-    <div>
+    <div className="class1">
       <div className="col-md-4 col-md-4 d-flex mx-auto align-items-center vh-100 pt-5 ">
         <div className="card w-100">
           <h3 className='text-center my-3 display-6 ' style={{fontWeight:'400'}}>Add Interview</h3>

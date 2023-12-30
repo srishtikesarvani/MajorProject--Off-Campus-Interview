@@ -199,42 +199,8 @@ const Home = () => {
                 <div className="carousel-item ">
                   <div className="container">
                     <div className="row">
-                      <div className="col-sm-12 col-lg-3">
-                        <div className="card w-100" style={{ width: "300px" }}>
-                          <img
-                            src="../public/cocacola.png card-img"
-                            alt=""
-                            className="card-img-top pt-4 img-fluid"
-                          />
-                          <div className="card-body">
-                            <div
-                              className="services-item bg-light p-3"
-                              style={{ borderRadius: "10px" }}
-                            >
-                              <h3 className="card-title text-center">
-                                CocaCola
-                              </h3>
-                              <p className="text-center">
-                                {" "}
-                                <i className="fa fa-star text-warning"></i>{" "}
-                                <i className="fa fa-star text-warning"></i>
-                                <i className="fa fa-star text-warning"></i>
-                                <i className="fa fa-star text-warning"></i>{" "}
-                                4.4k+ review{" "}
-                              </p>
-                              <p className="card-text text-center">
-                                {" "}
-                                Carbonated soft-drink company.
-                              </p>
-                            </div>
-                            <div className="text-center mt-3">
-                              <button className="btn btn-warning px-3 py-2 ">
-                                View job
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                     
+
                       <div className="col-sm-12 col-lg-3">
                         <div className="card w-100" style={{ width: "300px" }}>
                           <img
@@ -273,13 +239,48 @@ const Home = () => {
                       <div className="col-sm-12 col-lg-3">
                         <div className="card w-100" style={{ width: "300px" }}>
                           <img
-                            src="../public/hcl.png"
+                            src="../public/IAS.jpg"
                             alt=""
                             className="card-img-top pt-4 img-fluid card-img"
                           />
                           <div className="card-body">
                             <div
                               className="services-item bg-light p-3"
+                              style={{ borderRadius: "10px" }}
+                            >
+                              <h3 className="card-title text-center">
+                                {" "}
+                                 IAS
+                              </h3>
+                              <p className="text-center">
+                                {" "}
+                                <i className="fa fa-star text-warning"></i>
+                                <i className="fa fa-star text-warning"></i>{" "}
+                                3.4k+ review{" "}
+                              </p>
+                              <p className="card-text text-center">
+                                {" "}
+                                It is a indian fantacy sport plateform.
+                              </p>
+                            </div>
+                            <div className="text-center mt-3">
+                              <button className="btn btn-warning px-3 py-2 ">
+                                View job
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-sm-12 col-lg-3">
+                        <div className="card w-100" style={{ width: "300px" }}>
+                          <img
+                            src="../public/hcl.png"
+                            alt=""
+                            className="card-img-top pt-4 img-fluid card-img"
+                          />
+                          <div className="card-body">
+                            <div
+                              className="services-item bg-light p-4 mt-2"
                               style={{ borderRadius: "10px" }}
                             >
                               <h3 className="card-title text-center">HCL</h3>
@@ -343,7 +344,7 @@ const Home = () => {
 
               <>
                 <button
-                  className="carousel-control-prev"
+                  className="carousel-control-prev "
                   type="button"
                   data-bs-target="#carouselExample"
                   data-bs-slide="prev"
@@ -396,22 +397,22 @@ const Home = () => {
                  <div className="col-md-8">
                   <div className="row g-0">
                   <div className="col-lg-4 col-md-4 col-sm-6 col-12">
-                    <img src="../public/team.jpg" className="img-fluid" alt=""  style={{borderRadius:'5px'}}/>
+                    <img src="../public/it1.jpg" className="img-fluid  profesr" alt=""  style={{borderRadius:'5px'}}/>
                   </div>
                   <div className="col-lg-4 col-md-4 col-sm-6 col-12">
-                    <img src="../public/team.jpg" className="img-fluid" alt=""  style={{borderRadius:'5px'}}/>
+                    <img src="../public/it2.jpg" className="img-fluid profesro" alt=""  style={{borderRadius:'5px'}}/>
                   </div>
                   <div className="col-lg-4 col-md-4 col-sm-6 col-12">
-                    <img src="../public/team.jpg" className="img-fluid" alt="" style={{borderRadius:'5px'}} />
+                    <img src="../public/it3.png" className="img-fluid profesr" alt="" style={{borderRadius:'5px'}} />
                   </div>
                   <div className="col-lg-4 col-md-4 col-sm-6 col-12"> 
-                    <img src="../public/team.jpg" className="img-fluid" alt=""  style={{borderRadius:'5px'}}/>
+                    <img src="../public/it4.jpg" className="img-fluid profesr" alt=""  style={{borderRadius:'5px'}}/>
                   </div>
                   <div className="col-lg-4 col-md-4 col-sm-6 col-12">
-                    <img src="../public/team.jpg" className="img-fluid" alt=""  style={{borderRadius:'5px'}}/>
+                    <img src="../public/it5.jpg" className="img-fluid profesr" alt=""  style={{borderRadius:'5px'}}/>
                   </div>
                   <div className="col-lg-4 col-md-4 col-sm-6 col-12">
-                    <img src="../public/team.jpg" className="img-fluid" alt=""  style={{borderRadius:'5px'}}/>
+                    <img src="../public/it6.jpeg" className="img-fluid profesr" alt=""  style={{borderRadius:'5px'}}/>
                   </div>
                   </div>
                  </div>

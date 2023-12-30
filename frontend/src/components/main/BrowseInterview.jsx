@@ -36,7 +36,7 @@ const BrowseInterview = () => {
   };
 
   return (
-    <div>
+    <div className="class1">
       <div className="main vh-100">
         <header>
           <div className="container-fluid  ">

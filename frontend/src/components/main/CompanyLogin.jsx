@@ -49,16 +49,23 @@ const CompanyLogin = () => {
 }})
 
   return (
-    <div>
-       <div className="container col-md-4 d-flex mx-auto align-items-center vh-100 pt-5">
-        <div className="card w-100 bg-light" style={{ border: "none", borderRadius: "5px" }}>
+    <div className='class1'>
+       <div className="container col-md-6 d-flex mx-auto align-items-center vh-100 pt-5">
+        <div className="card w-100 shadow" style={{ border: "none", borderRadius: "5px" }}>
         <h3 className="text-center mt-4 text-dark fw-bold"> Company Login </h3>
-        <div className="card-body"> 
+        <div className="row g-0">
+          <div className='col-md-6'>
+            <div className="background m-4"></div>
+          </div>
+       <div className="col-md-6 my-auto">
+       <div className="card-body "> 
         <form onSubmit={loginForm.handleSubmit} >
           <input type="email" id='email' onChange={loginForm.handleChange} value={loginForm.values.email} className='form-control mb-4 ' placeholder = 'Email' style={{ borderRadius: "5px" }} />
           <input type="password" id='password' onChange={loginForm.handleChange} value={loginForm.values.password} className='form-control mb-4 ' placeholder = 'password' style={{ borderRadius: "5px" }} />
           <button className='btn btn-success w-100' style={{ borderRadius: "5px" }} > Login Here</button>
           </form>
+        </div>
+       </div>
         </div>
         </div>
 

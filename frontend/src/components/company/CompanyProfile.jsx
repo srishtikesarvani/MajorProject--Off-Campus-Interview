@@ -71,7 +71,7 @@ const CompanyProfile = () => {
 
 
   return (
-    <div>
+    <div className="class1">
       <div className="container">
         <h3>Company profile</h3>
         <div className="row d-flex justify-content-center align-items-center vh-100">

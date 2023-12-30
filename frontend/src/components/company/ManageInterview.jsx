@@ -27,7 +27,7 @@ const ManageInterview = () => {
     }
   }
   return (
-    <div>
+    <div className="class1">
       <div className="container">
         <h3 className='text-center my-4'>
           Manage Interview
