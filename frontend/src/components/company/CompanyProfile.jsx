@@ -71,37 +71,73 @@ const CompanyProfile = () => {
 
 
   return (
-    <div className="class1">
+    <div className="class1" style={{paddingTop: '100px'}}>
       <div className="container">
-        <h3>Company profile</h3>
+        {/* <h3>Company profile</h3> */}
         <div className="row d-flex justify-content-center align-items-center vh-100">
           <div className="col-md-10 mb-4 mb-lg-0">
             <div className="card mb-3" style={{borderRadius:'.5rem'}}>
               <div className="row">
-                <div className="col-md-4 text-center">
+                <h3 className='text-center fw-bold py-3'>Company profile</h3>
+                <div className="col-md-4 text-center p-5 my-auto">
                   <img className='img-fluid' src={`${import.meta.env.VITE_API_URL}/${currentUser.image}`} alt="" />
-                  <label htmlFor="img" className='btn btn-dark'>  Update Image</label>
+                  <label htmlFor="img" className='btn btn-dark mt-3'>  Update Image</label>
                   <input onChange={uploadFile} type="file" id="img" hidden />
-                  <h2>Company Name</h2>   
-                  <p>Location</p>
+                  <h2>{currentUser.name}</h2>   
+                  <p>{currentUser.location}</p>
                 </div>
                 <div className="col-md-8">
                   <form  onSubmit={profileForm.handleSubmit}>
              <div className="col p-3">    
+               <div className="row">
+                <div className="col-md-6">
                 <input type="text" id='name' onChange={profileForm.handleChange} value={profileForm.values.name} placeholder='Company Name' className='form-control mb-3' />
-                    <input type="text"  id='location' onChange={profileForm.handleChange} value={profileForm.values.location} placeholder='Location' className='form-control mb-3' />
-                    <input type="date"  id='createdat' onChange={profileForm.handleChange} value={profileForm.values.createdat} placeholder='Created At' className='form-control mb-3' />
-                    <input type="date"  id='' onChange={profileForm.handleChange} value={profileForm.values.createdat} placeholder='Created At' className='form-control mb-3' />
-                    <input type="date"  id='createdat' onChange={profileForm.handleChange} value={profileForm.values.createdat} placeholder='Created At' className='form-control mb-3' />
-                    <input type="date"  id='createdat' onChange={profileForm.handleChange} value={profileForm.values.createdat} placeholder='Created At' className='form-control mb-3' />
-                    <input type="date"  id='createdat' onChange={profileForm.handleChange} value={profileForm.values.createdat} placeholder='Created At' className='form-control mb-3' />
-                    <input type="date"  id='createdat' onChange={profileForm.handleChange} value={profileForm.values.createdat} placeholder='Created At' className='form-control mb-3' />
-                    <label htmlFor=""> Company Description</label>
-                    <textarea name="" id= " description" onChange={profileForm.handleChange} value={profileForm.values.description} cols="30" rows="5" className='form-control mb-3'></textarea>
-                    <label htmlFor="">Software Description</label>
+                    
+                </div>
+                <div className="col-md-6">
+                <input type="text"  id='location' onChange={profileForm.handleChange} value={profileForm.values.location} placeholder='Location' className='form-control mb-3' />
+                    
+                </div>
+                <div className="col-md-6">
+                <input type="date"  id='createdat' onChange={profileForm.handleChange} value={profileForm.values.createdat} placeholder='Created At' className='form-control mb-3' />
+                    
+                </div>
+                <div className="col-md-6">
+                <input type="email"  id='email' onChange={profileForm.handleChange} value={profileForm.values.email} placeholder='Email' className='form-control mb-3' />
+                   
+                </div>
+                <div className="col-md-6">
+                <input type="number"  id='contact' onChange={profileForm.handleChange} value={profileForm.values.contact} placeholder='Contact' className='form-control mb-3' />
+                   
+                </div>
+                <div className="col-md-6">
+                <input type="text"  id='employee' onChange={profileForm.handleChange} value={profileForm.values.employee} placeholder='No. of  employee' className='form-control mb-3' />
+                   
+                </div>
+                <div className="col-md-6">
+                <input type="text"  id='vision' onChange={profileForm.handleChange} value={profileForm.values.vision} placeholder='Vision' className='form-control mb-3' />
+                    
+                </div>
+                <div className="col-md-6">
+                <input type="text"  id='mission' onChange={profileForm.handleChange} value={profileForm.values.mission} placeholder='Mission' className='form-control mb-3' />
+                    
+                </div>
+                <div className="col-md-6">
+                <label htmlFor=""> Company Description</label>
+                    <textarea name="" id= " description" onChange={profileForm.handleChange} value={profileForm.values.description} cols="30" rows="3" className='form-control mb-3'></textarea>
+                   
+                </div>
+                <div className="col-md-6">
+                <label htmlFor="">Software Description</label>
                     <textarea name="" id= " sfdescription" onChange={profileForm.handleChange} value={profileForm.values.sfdescription} cols="30" rows="3" className='form-control mb-3'></textarea>
-                    <label htmlFor=""> Service Description</label>
+                    
+                </div>
+                <div className="col-md-12">
+                <label htmlFor=""> Service Description</label>
                     <textarea name="" id= "servicedescription" onChange={profileForm.handleChange} value={profileForm.values.servicedescription} cols="30" rows="3" className='form-control mb-3'></textarea>
+                </div>
+               </div>
+
                     <button className='btn btn-outline-success w-100' type='submit'>Submit</button>
                     </div>
                   </form>

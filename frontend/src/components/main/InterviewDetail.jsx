@@ -32,7 +32,7 @@ const InterviewDetail = () => {
              <h6 className='text-dark fw-bold ' style={{fontSize:'30px'}}>{interviewData.designation}</h6>
             </div>
             <div className="col-md-12 ">
-              <Link to={'/main/companydetail/'+interviewData.company._id} className='text-secondary '  style={{fontWeight:'400'}}> {interviewData.company.name}<span className='px-3'> <i className="  text-warning fa fa-star" ></i>  4.6  <span className='px-3'>2 Reviews</span> </span></Link>
+              <Link to={'/main/companydetail/'+interviewData.company._id} className='text-secondary '  style={{fontWeight:'400'}}> {interviewData.company.name}</Link> <span className='px-3'> <i className="  text-warning fa fa-star " ></i>  4.6  <span className='px-1 text-secondary '>2 Reviews</span> </span>
             </div>
             <div className="col-md-12">
              <p className='text-secondary' style={{fontWeight:'400'}}> 💼{interviewData.experience}  <span className='px-3'>₹ <span  className='px-1'> {interviewData.salary}</span></span></p> 

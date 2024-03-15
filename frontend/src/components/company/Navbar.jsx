@@ -3,8 +3,8 @@ import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <div>
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <div  className='classtop'>
+        <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
   <div className="container-fluid">
     <a className="navbar-brand" href="#">
       Navbar

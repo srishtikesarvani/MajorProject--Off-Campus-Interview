@@ -49,20 +49,22 @@ const CompanyLogin = () => {
 }})
 
   return (
-    <div className='class1'>
-       <div className="container col-md-6 d-flex mx-auto align-items-center vh-100 pt-5">
-        <div className="card w-100 shadow" style={{ border: "none", borderRadius: "5px" }}>
+    <div className='class1 d-flex align-items-center'>
+       <div className="col-md-6 mx-auto">
+        <div className="card w-100 shadow " style={{ backdropFilter: 'blur(10px)', border: "none", borderRadius: "5px", backgroundColor:'#ffffff91'}}>
+       <div className="card-body "> 
         <h3 className="text-center mt-4 text-dark fw-bold"> Company Login </h3>
-        <div className="row g-0">
+        <div className="row">
           <div className='col-md-6'>
-            <div className="background m-4"></div>
+            <div className="background"></div>
           </div>
        <div className="col-md-6 my-auto">
-       <div className="card-body "> 
+        <h4 className='text-center my-4'>Login Here</h4>
         <form onSubmit={loginForm.handleSubmit} >
           <input type="email" id='email' onChange={loginForm.handleChange} value={loginForm.values.email} className='form-control mb-4 ' placeholder = 'Email' style={{ borderRadius: "5px" }} />
           <input type="password" id='password' onChange={loginForm.handleChange} value={loginForm.values.password} className='form-control mb-4 ' placeholder = 'password' style={{ borderRadius: "5px" }} />
-          <button className='btn btn-success w-100' style={{ borderRadius: "5px" }} > Login Here</button>
+          <button className='btn btn-success w-100 mtbtn' style={{ borderRadius: "5px" ,transitionProperty: "all",
+        transitionDuration:"0.5s" }} > Login Here</button>
           </form>
         </div>
        </div>

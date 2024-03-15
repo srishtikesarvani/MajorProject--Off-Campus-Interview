@@ -39,7 +39,7 @@ const BrowseInterview = () => {
     <div className="class1">
       <div className="main vh-100">
         <header>
-          <div className="container-fluid  ">
+          <div className="container-fluid  mt-5">
           <div className="container pt-4">
             <h3 className="text-center"> Browse Interview Here</h3>
           </div>

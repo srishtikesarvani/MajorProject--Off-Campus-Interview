@@ -20,7 +20,7 @@ const Companydetail = () => {
 
   const displayDetail = ()=>{
     if(companyData!==null){
-      return <div className="container">
+      return <div className="container mt-5">
             <div className="row">
                 <div className="col-md-12">
                 <div class="card ">
@@ -58,7 +58,7 @@ const Companydetail = () => {
     }
   }
   return (
-    <div className="class1">
+    <div className="class1 mt-5">
     {displayDetail()} 
     </div>
   )

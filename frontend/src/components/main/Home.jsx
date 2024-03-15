@@ -36,6 +36,7 @@ const Home = () => {
                     <div className="col-md-12 text-center">
                       <Link className="btn btn-success  " to={'/main/companylogin'}> Company Login</Link>
                       <Link className="btn btn-success  mx-3" to={'/company/addinterview'}>Add Interview </Link>
+                      <Link className="btn btn-success  mx-1" to={'/main/browseinterview'}> BrowseInterview </Link>
                     </div>
                   </div>
                 </div>
@@ -378,11 +379,11 @@ const Home = () => {
       <div className="container-fluid services-item bg-light ">
         <div className="row d-flex justify-content-center align-items-center no-gutter py-5 g-0">
        
-          <div className="col-md-10 mb-4 mb-lg-0">
+          <div className="col-md-8 mx-auto mb-4 mb-lg-0">
             <div className="card mb-3 " style={{border:'none'}}>
               {/* <div className="container"> */}
                 <div className="row  g-0">
-                 <div className="col-md-4 bg-success">
+                 <div className="col-md-6 bg-success">
                   <div className="col-md-12">
                     <h6 className="text-center pt-4 text-light" style={{fontFamily:'Bungee Outline',fontSize:'6rem' }}>6</h6>
                   </div>
@@ -394,25 +395,25 @@ const Home = () => {
                   </div>
 
                  </div>
-                 <div className="col-md-8">
+                 <div className="col-md-6 mx-auto">
                   <div className="row g-0">
-                  <div className="col-lg-4 col-md-4 col-sm-6 col-12">
-                    <img src="../public/it1.jpg" className="img-fluid  profesr" alt=""  style={{borderRadius:'5px'}}/>
+                  <div className="col-lg-4 col-md-3 col-sm-6 col-12">
+                    <img src="../public/it1.jpg" className="w-100  profesr" alt=""  style={{borderRadius:'5px'}}/>
                   </div>
-                  <div className="col-lg-4 col-md-4 col-sm-6 col-12">
-                    <img src="../public/it2.jpg" className="img-fluid profesro" alt=""  style={{borderRadius:'5px'}}/>
+                  <div className="col-lg-4 col-md-3 col-sm-6 col-12">
+                    <img src="../public/it2.jpg" className="w-100 profesr" alt=""  style={{borderRadius:'5px'}}/>
                   </div>
-                  <div className="col-lg-4 col-md-4 col-sm-6 col-12">
-                    <img src="../public/it3.png" className="img-fluid profesr" alt="" style={{borderRadius:'5px'}} />
+                  <div className="col-lg-4 col-md-3 col-sm-6 col-12">
+                    <img src="../public/it3.png" className="w-100 profesr" alt="" style={{borderRadius:'5px'}} />
                   </div>
                   <div className="col-lg-4 col-md-4 col-sm-6 col-12"> 
-                    <img src="../public/it4.jpg" className="img-fluid profesr" alt=""  style={{borderRadius:'5px'}}/>
+                    <img src="../public/it4.jpg" className="w-100 profesr" alt=""  style={{borderRadius:'5px'}}/>
                   </div>
                   <div className="col-lg-4 col-md-4 col-sm-6 col-12">
-                    <img src="../public/it5.jpg" className="img-fluid profesr" alt=""  style={{borderRadius:'5px'}}/>
+                    <img src="../public/it5.jpg" className="w-100 profesr" alt=""  style={{borderRadius:'5px'}}/>
                   </div>
                   <div className="col-lg-4 col-md-4 col-sm-6 col-12">
-                    <img src="../public/it6.jpeg" className="img-fluid profesr" alt=""  style={{borderRadius:'5px'}}/>
+                    <img src="../public/it6.jpeg" className="w-100 profesr" alt=""  style={{borderRadius:'5px'}}/>
                   </div>
                   </div>
                  </div>

@@ -6,7 +6,10 @@ const Main = () => {
   return (
     <>
         <Navbar/>
+        <div style={{paddingTop: 100}}>
+
         <Outlet />
+        </div>
     </>
   )
 }

@@ -51,8 +51,8 @@ const AddInterview = () => {
   }) 
 
   return (
-    <div className="class1">
-      <div className="col-md-4 col-md-4 d-flex mx-auto align-items-center vh-100 pt-5 ">
+    <div className="class1"  style={{paddingTop: '100px'}}>
+      <div className="col-md-4 col-md-4 d-flex mx-auto align-items-center pt-5 ">
         <div className="card w-100">
           <h3 className='text-center my-3 display-6 ' style={{fontWeight:'400'}}>Add Interview</h3>
           <div className="card-body">
