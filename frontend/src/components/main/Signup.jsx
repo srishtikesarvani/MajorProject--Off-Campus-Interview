@@ -40,11 +40,11 @@ const Signup = () => {
     },
   });
   return (
-    <div>
+    <div className="class2">
       <div className="container col-md-7 d-flex mx-auto align-items-center vh-100 pt-5">
         <div
           className="card w-100 shadow"
-          style={{ border: "none", borderRadius: "5px" }}
+          style={{ border: "none", borderRadius: "5px", backdropFilter:'blur(10px)', backgroundColor:'#ffffff91' }}
         >
           <h3 className="text-center mt-4 text-dark fw-bold"> Sign Up </h3>
           <div className="card-body ">

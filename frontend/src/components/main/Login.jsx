@@ -46,9 +46,9 @@ const Login = () => {
   
 }})
   return (
-    <div>
-      <div className="container col-md-6 d-flex mx-auto align-items-center vh-75 mt-5">
-        <div className="card w-100 shadow" style={{ border: "none", borderRadius: "5px" }}>
+    <div className='class2'>
+      <div className="container col-md-6 d-flex mx-auto align-items-center vh-100 ">
+        <div className="card w-100 shadow" style={{ border: "none", borderRadius: "5px" , backgroundColor:'#ffffff91', backdropFilter:'blur(10px)'}}>
         <h3 className="text-center mt-4 text-dark " style={{fontWeight:'700'}}> Login Here </h3>
         <div className="card-body py-4"> 
        <div className="row">

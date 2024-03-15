@@ -1,8 +1,46 @@
+import { useFormik } from 'formik'
 import React from 'react'
+import Swal from 'sweetalert2';
 
 const ContactUs = () => {
+  const contactForm = useFormik({
+    initialValues:{
+      name:'',
+      email:'',
+      subject:'',
+      message:'',
+
+    },
+    onSubmit: async (values)=>{
+      console.table(values);
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/Contact/add`,{
+        method :'POST',
+        body : JSON.stringify(values),
+        headers : {
+          'Content-Type' : 'application/json'
+        }
+
+      });
+      console.log(res.status);
+      if(res.status === 200) {
+        Swal.fire({
+          icon: 'success',
+          title : '🤗🤗 Successfully ',
+          text :'Successfully! you can contact us'
+        })
+      
+      }else{
+        Swal.fire({
+          icon: 'error',
+          title : 'Somthing Went Wrong',
+          text :'Please Try Again'
+        })
+      }
+    },
+
+  })
   return (
-    <div>
+    <div >
       <div className="container  my-5" style={{borderRadius:'5px'}}>
         <div className="row ">
           <div className="col-md-12">
@@ -11,6 +49,7 @@ const ContactUs = () => {
           </div>
         </div>
         <div className="row">
+        <form onSubmit={contactForm.handleSubmit}>
           <div className="col-md-4 " style={{paddingLeft:'4rem'}} >
             <i className="fa fa-map-marker text-success" ></i>
             <h3>Location</h3>
@@ -29,18 +68,21 @@ const ContactUs = () => {
                   <span id='lblResponse' className='tab-content'></span>
                 </div>
               </div>
+              
               <div className="row">
+              
                 <div className="col-md-6">
-                  <input type="text" name='tbname' id='tbname' className='form-control my-2 ' placeholder='Name' />
+                  <input type="text" name='tbname' id='name' onChange={contactForm.handleChange} value={contactForm.values.name} className='form-control my-2 ' placeholder='Name' />
                 </div>
                 <div className="col-md-6">
-                  <input type="email" name='tbEmail' id='tbEmail' className='form-control my-2 ' placeholder='Email' />
+
+                  <input type="email" name='tbEmail' id='email' onChange={contactForm.handleChange} value={contactForm.values.email} className='form-control my-2 ' placeholder='Email' />
                 </div>
                 <br />
               </div>
               <div className="row">
                 <div className="col-md-12">
-                  <input type="text" name='tbSubject' id='tbSubject' className='form-control my-2 ' placeholder='Subject' />
+                  <input type="text" name='tbSubject' id='subject' onChange={contactForm.handleChange} value={contactForm.values.subject} className='form-control my-2 ' placeholder='Subject' />
                 </div>
               </div>
               <div className="row">
@@ -55,6 +97,7 @@ const ContactUs = () => {
               </div>
             </div>
           </div>
+          </form>
         </div>
       </div>
     </div>
