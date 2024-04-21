@@ -40,7 +40,7 @@ const CompanySignup = () => {
     },
   });
   return (
-    <div className="class1">
+    <div className="class2">
       <div className="container col-md-4 d-flex mx-auto align-items-center vh-100 pt-5">
         <div
           className="card w-100 shadow"

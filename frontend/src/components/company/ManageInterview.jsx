@@ -27,12 +27,16 @@ const ManageInterview = () => {
     }
   }
   return (
-    <div className="class1">
+    <div className="class2">
       <div className="container">
-        <h3 className='text-center my-4'>
+       <div className="row pt-4">
+        <div className="col-md-12">
+        <h3 className='text-center text-light display-6 fw-bold my-5 pt-5'>
           Manage Interview
         </h3>
-        <table className="table">
+        </div>
+       </div>
+        <table className="table" >  
           <thead>
             <tr>
             <th> S. no.</th>

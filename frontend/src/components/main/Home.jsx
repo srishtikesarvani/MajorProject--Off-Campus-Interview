@@ -1,16 +1,22 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, {useRef} from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Home = () => {
+
+    const searchRef = useRef();
+
+    const navigate= useNavigate();
+
+
   return (
-    <div>
+    <div className="class2">
       <div className="main1">
         <div className="container services-item  ">
-          <div className="py-5 ">
+          <div className="">
             <div className="row pt-5 ">
               <div className="col-md-12 text-center ">
                 <h3 className="display-4 fw-bold ">
-                  Find <span className="text-success"> your </span> dream job
+                  Find <span className="text-light"> your </span> dream job
                   now
                 </h3>
                 <p style={{ fontSize: "1.8rem" }}>
@@ -21,20 +27,21 @@ const Home = () => {
               <div className="col-md-8 mb-5">
                 <form className="input-group my-3  " role="search">
                   <input
+                  ref={searchRef}
                     className="form-control  p-3"
                     style={{ fontSize: "1.5rem", border: "none" }}
                     type="search"
                     placeholder="Search your job"
                     aria-label="Search"
                   />
-                  <button className="btn btn-success " type="submit">
+                  <button className="btn btn-success " onClick={() => navigate('/main/browseinterview/' + searchRef.current.value)}>
                     <i class="fa fa-search" aria-hidden="true"></i>
                   </button>
                 </form>
                 <div className="container">
                   <div className="row ">
                     <div className="col-md-12 text-center">
-                      <Link className="btn btn-success  " to={'/main/companylogin'}> Company Login</Link>
+                      
                       <Link className="btn btn-success  mx-3" to={'/company/addinterview'}>Add Interview </Link>
                       <Link className="btn btn-success  mx-1" to={'/main/browseinterview'}> BrowseInterview </Link>
                     </div>
@@ -45,7 +52,8 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="container-fluid mt-5 ">
+      
+      <div className="container-fluid  ">
         <h4 className="display-6 fw-bold text-dark text-center pt-4 pb-3 ">
           Top companies hiring now
         </h4>
@@ -187,7 +195,7 @@ const Home = () => {
                               </p>
                             </div>
                             <div className="text-center mt-3">
-                              <button className="btn btn-warning px-3 py-2 ">
+                              <button  className="btn btn-warning px-3 py-2 ">
                                 View job
                               </button>
                             </div>
@@ -376,14 +384,14 @@ const Home = () => {
       <h4 className="display-6 fw-bold text-dark text-center pt-4 pb-3 ">
           A team united by shared value
         </h4>
-      <div className="container-fluid services-item bg-light ">
-        <div className="row d-flex justify-content-center align-items-center no-gutter py-5 g-0">
+      <div className="container-fluid  ">
+        <div className="row d-flex justify-content-center align-items-center no-gutter py-4 g-0">
        
           <div className="col-md-8 mx-auto mb-4 mb-lg-0">
             <div className="card mb-3 " style={{border:'none'}}>
               {/* <div className="container"> */}
                 <div className="row  g-0">
-                 <div className="col-md-6 bg-success">
+                 <div className="col-md-6 bg-success" style={{borderTopLeftRadius:'5px',borderBottomLeftRadius:'5px'}}>
                   <div className="col-md-12">
                     <h6 className="text-center pt-4 text-light" style={{fontFamily:'Bungee Outline',fontSize:'6rem' }}>6</h6>
                   </div>
@@ -397,22 +405,22 @@ const Home = () => {
                  </div>
                  <div className="col-md-6 mx-auto">
                   <div className="row g-0">
-                  <div className="col-lg-4 col-md-3 col-sm-6 col-12">
+                  <div className="col-lg-4 col-md-3 col-sm-6 col-12  box">
                     <img src="../public/it1.jpg" className="w-100  profesr" alt=""  style={{borderRadius:'5px'}}/>
                   </div>
-                  <div className="col-lg-4 col-md-3 col-sm-6 col-12">
+                  <div className="col-lg-4 col-md-3 col-sm-6 col-12 box">
                     <img src="../public/it2.jpg" className="w-100 profesr" alt=""  style={{borderRadius:'5px'}}/>
                   </div>
-                  <div className="col-lg-4 col-md-3 col-sm-6 col-12">
+                  <div className="col-lg-4 col-md-3 col-sm-6 col-12 box">
                     <img src="../public/it3.png" className="w-100 profesr" alt="" style={{borderRadius:'5px'}} />
                   </div>
-                  <div className="col-lg-4 col-md-4 col-sm-6 col-12"> 
+                  <div className="col-lg-4 col-md-4 col-sm-6 col-12 box"> 
                     <img src="../public/it4.jpg" className="w-100 profesr" alt=""  style={{borderRadius:'5px'}}/>
                   </div>
-                  <div className="col-lg-4 col-md-4 col-sm-6 col-12">
+                  <div className="col-lg-4 col-md-4 col-sm-6 col-12 box">
                     <img src="../public/it5.jpg" className="w-100 profesr" alt=""  style={{borderRadius:'5px'}}/>
                   </div>
-                  <div className="col-lg-4 col-md-4 col-sm-6 col-12">
+                  <div className="col-lg-4 col-md-4 col-sm-6 col-12 box">
                     <img src="../public/it6.jpeg" className="w-100 profesr" alt=""  style={{borderRadius:'5px'}}/>
                   </div>
                   </div>
@@ -423,7 +431,69 @@ const Home = () => {
           </div>
         </div>
       </div>
-      
+      {/* <div className="container mt-5 ">
+        <div className="row ">
+          <div className="col-md-4 pt-1">
+            <div className="card cr">
+              <div className="imgbox">
+                <img className="smimage" src="/public/career1.jpg" alt="" />
+              </div>
+              <div className="content">
+                <h2>
+                  Make it work
+                </h2>
+                <p>A good programmer is someone who always looks both ways before crossing a one-way street </p>
+              </div>
+            </div>
+          </div>
+        <div className="col-md-8">
+        <div className="col-md-12   mx-auto  " style={{backgroundColor:'whitesmoke'}}  >
+          <p className='text-center my-1 ' style={{fontSize:'30px' , fontWeight:'200'}}>Whats different when you work with us?</p>
+        <div className="row gx-5" >
+          <div className="col-md-12 p-5" >
+            <p>When you engage our corporation for your project. you get instant access to a team of 120 technology legends including strategists, desigener, developers, quality engineers and project managers. all working togather for a comman end goal:to crreate revenue -generating more solutions for You. </p>
+              <p>We may be scattered all around the world. but we all speak the same language :code.It's in our DNA. We run all projects with our inborn passion for programming.</p>
+          <p>Having been onnthe market for more than 11 years. it's our hybrid model for selecting intrested student</p>
+          </div>
+        
+        </div>
+        </div>
+        </div>
+         
+        </div>
+      </div> */}
+      <div className="container-fluid bg-light ">
+        <div className="row">
+          
+            <div className="col-md-2">
+             <a href="#"> <img src="/public/logor.png" alt="" className="img-fluid  pt-4" width={180} /></a>
+            </div>
+            <div className="col-md-3 pt-5  text-center">
+            <h3>Company</h3> 
+            <Link className="   footer mx-3" to={'/main/about'}>About Us </Link><br></br>
+            <Link className=" footer mx-3" to={'/main/contact'}>Contact US</Link><br></br>
+            <Link className=" footer mx-3" to={'/main/feedback'}>Feedback</Link>
+            
+            </div>
+            <div className="col-md-2 pt-5 text-center">
+              <h3>Services</h3>
+              <p>Our Services help you move ahead inyour career, faster! Increase your Profile visibility to recuiters upto 3 times.</p>
+               
+            </div>
+            <div className="col-md-1"></div>
+            <div className="col-md-1 mt-5 px-3">
+              <img src="/public/nau.png" width={90} alt="" className="img-fluid pt-3 "/>
+            </div>
+            <div className="col-md-1">
+              <img src="/public/aon.png" width={90} alt="" className="img-fluid pt-5"/>
+            </div>
+            <div className="col-md-1">
+              <img src="/public/job.png" width={90} alt="" className="img-fluid pt-5"/>
+            </div>
+           
+          </div>
+        
+      </div>
     </div>
   );
 };

@@ -43,6 +43,7 @@ function App() {
               <Route path="companysignup" element={<CompanySignup />} />
               <Route path="companylogin" element={<CompanyLogin />} />
               <Route path="browseinterview" element={<BrowseInterview />} />
+              <Route path="browseinterview/:job" element={<BrowseInterview />} />
               <Route path="subscribe" element={<Subscribe />} />
               <Route path="interviewdetail/:id" element={<InterviewDetail />} />
               <Route path="companydetail/:id" element={<Companydetail />} />

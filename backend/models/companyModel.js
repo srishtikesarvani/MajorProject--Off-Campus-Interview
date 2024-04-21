@@ -4,7 +4,7 @@ const myschema = new Schema({
    image:{type:String, default:'defaultimg.jpg'},
    category:String,
    description:{type:String, default:'No Description Provided'},
-   createdAt:Date,
+   // createdAt:Date,
    email:{type:String, require:true},
    password:{type:String, require:true},
    location:String,
@@ -13,7 +13,7 @@ const myschema = new Schema({
    sfdescription:String,
    servicedescription:String,
    vision:String,
-   mission:String
+   // mission:String
 
 })
 module.exports= model('Company',myschema)

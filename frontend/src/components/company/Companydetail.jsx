@@ -58,7 +58,7 @@ const Companydetail = () => {
     }
   }
   return (
-    <div className="class1 mt-5">
+    <div className="class2 mt-5">
     {displayDetail()} 
     </div>
   )

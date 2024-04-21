@@ -40,24 +40,25 @@ const ContactUs = () => {
 
   })
   return (
-    <div >
-      <div className="container  my-5" style={{borderRadius:'5px'}}>
+    <div className='class2'>
+      <div className="container  vh-100 " style={{borderRadius:'5px'}}>
+      <form onSubmit={contactForm.handleSubmit}>
         <div className="row ">
-          <div className="col-md-12">
-            <h1 className='display-4 text-center fw-bold text-dark mt-3'>Contact Us</h1>
+          <div className=" col-md-12">
+            <h1 className='display-4 text-center fw-bold text-dark mt-5'>Contact Us</h1>
             <p className='lead text-center '>For Any Query Please Contact With us</p>
           </div>
         </div>
         <div className="row">
-        <form onSubmit={contactForm.handleSubmit}>
-          <div className="col-md-4 " style={{paddingLeft:'4rem'}} >
-            <i className="fa fa-map-marker text-success" ></i>
-            <h3>Location</h3>
-            <p>Area,City,Country</p>
-            <i className="fa fa-phone text-secondary"></i>
+       
+          <div className="col-md-4  text-light" style={{paddingLeft:'4rem'}} >
+            <i className="fa fa-map-marker text-danger" ></i>
+            <h3> Location</h3>
+            <p>Sector c,Lucknow,UttarPradesh</p>
+            <i className="fa fa-phone text-danger"></i>
             <h3>Call us</h3>
             <p>+92 345 34567</p>
-            <i className="fa fa-envelope text-dark" ></i>
+            <i className="fa fa-envelope text-danger" ></i>
             <h3>Email</h3>
             <p>Info@gmail.com</p>
           </div>
@@ -72,33 +73,34 @@ const ContactUs = () => {
               <div className="row">
               
                 <div className="col-md-6">
-                  <input type="text" name='tbname' id='name' onChange={contactForm.handleChange} value={contactForm.values.name} className='form-control my-2 ' placeholder='Name' />
+                  <input type="text" id='name' onChange={contactForm.handleChange} value={contactForm.values.name} className='form-control my-2 ' placeholder='Name' />
                 </div>
                 <div className="col-md-6">
 
-                  <input type="email" name='tbEmail' id='email' onChange={contactForm.handleChange} value={contactForm.values.email} className='form-control my-2 ' placeholder='Email' />
+                  <input type="email" id='email' onChange={contactForm.handleChange} value={contactForm.values.email} className='form-control my-2 ' placeholder='Email' />
                 </div>
                 <br />
               </div>
               <div className="row">
                 <div className="col-md-12">
-                  <input type="text" name='tbSubject' id='subject' onChange={contactForm.handleChange} value={contactForm.values.subject} className='form-control my-2 ' placeholder='Subject' />
+                  <input type="text"  id='subject' onChange={contactForm.handleChange} value={contactForm.values.subject} className='form-control my-2 ' placeholder='Subject' />
                 </div>
               </div>
               <div className="row">
                 <div className="col-md-12">
-                  <textarea name="tbmessage" id="tbmessage"  placeholder='Message' className='form-control my-2'  cols="30" rows="5"></textarea>
+                  <textarea  id="message" onChange={contactForm.handleChange} value={contactForm.values.message}  placeholder='Message' className='form-control my-2'  cols="30" rows="5"></textarea>
                 </div>
               </div>
               <div className="row">
                 <div className="col-md-12">
-                  <button className='btn btn-primary  w-100 mb-3'>Send Message</button>
+                  <button className='btn btn-success  w-100 mb-3' type='submit'>Send Message</button>
                 </div>
               </div>
             </div>
           </div>
-          </form>
+          
         </div>
+        </form>
       </div>
     </div>
   )

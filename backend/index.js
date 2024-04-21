@@ -4,6 +4,7 @@ const userRouter = require("./routers/userRouter");
 const companyRouter = require("./routers/companyRouter");
 const feedbackRouter = require("./routers/feedbackRouter");
 const interviewRouter = require("./routers/interviewRouter");
+const contactRouter = require("./routers/contactRouter");
 const utilRouter = require("./routers/util");
 
 
@@ -30,6 +31,7 @@ app.use("/user", userRouter);
 app.use("/company", companyRouter);
 app.use("/feedback", feedbackRouter);
 app.use("/interview", interviewRouter);
+app.use("/Contact", contactRouter);
 app.use("/util", utilRouter);
 
 app.use(express.static('./static/uploads'));

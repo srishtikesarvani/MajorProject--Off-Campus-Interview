@@ -51,24 +51,38 @@ const AddInterview = () => {
   }) 
 
   return (
-    <div className="class1"  style={{paddingTop: '100px'}}>
-      <div className="col-md-4 col-md-4 d-flex mx-auto align-items-center pt-5 ">
-        <div className="card w-100">
-          <h3 className='text-center my-3 display-6 ' style={{fontWeight:'400'}}>Add Interview</h3>
+    <div className="class2"  style={{paddingTop: '80px'}}>
+      <div className="col-md-6 d-flex mx-auto align-items-center pt-5 vh-100 ">
+        <div className="card w-100" style={{ border: "none", borderRadius: "5px" , backgroundColor:'#ffffff91', backdropFilter:'blur(10px)'}}>
+          <h3 className='text-center my-4 display-6 ' style={{fontWeight:'400'}}>Add Interview</h3>
           <div className="card-body">
           <form onSubmit={interviewForm.handleSubmit} >
             <input type="text" id="designation" onChange={interviewForm.handleChange} value={interviewForm.values.designation}  placeholder='Designation'  className='form-control mb-3' />
             {/* <input type="text"  id="company" onChange={interviewForm.handleChange} value={interviewForm.values.company} placeholder='Company'  className='form-control mb-3' /> */}
             {/* <input type="text"  id="name" onChange={interviewForm.handleChange} value={interviewForm.values.name} placeholder='Name'  className='form-control mb-3' /> */}
-            <input type="text"  id="experience" onChange={interviewForm.handleChange} value={interviewForm.values.experience} placeholder='Experience'  className='form-control mb-3' />
-            <input type="text"  id="location" onChange={interviewForm.handleChange} value={interviewForm.values.location} placeholder='Location'  className='form-control mb-3' />
+            
             <input type="text"  id="skill" onChange={interviewForm.handleChange} value={interviewForm.values.skill} placeholder='Your Skills'  className='form-control mb-3' />
+            
+           <div className="row">
+            <div className="col-md-6">
             <input type="text"  id="salary" onChange={interviewForm.handleChange} value={interviewForm.values.salary} placeholder='Salary'  className='form-control mb-3' />
-            <input type="text"  id="noticePeriod" onChange={interviewForm.handleChange} value={interviewForm.values.noticePeriod} placeholder='Notice for User Awareness'  className='form-control mb-3' />
+            
+            </div>
+            <div className="col-md-6">
+            <input type="text"  id="location" onChange={interviewForm.handleChange} value={interviewForm.values.location} placeholder='Location'  className='form-control mb-3' />
+            </div>
+           </div>
+           <div className="row">
+           <div className="col-md-6"> <input type="text"  id="noticePeriod" onChange={interviewForm.handleChange} value={interviewForm.values.noticePeriod} placeholder='Notice for User Awareness'  className='form-control mb-3' /></div>
+           <div className="col-md-6">
+           <input type="text"  id="experience" onChange={interviewForm.handleChange} value={interviewForm.values.experience} placeholder='Experience'  className='form-control mb-3' />
+           </div>
+           </div>
+           
             <input type="text"  id="applyLink" onChange={interviewForm.handleChange} value={interviewForm.values.applyLink} placeholder='Add your company link'  className='form-control mb-3' />
             <label htmlFor="" className='my-1'>Description</label>
             <textarea name=""  id="requirement" onChange={interviewForm.handleChange} value={interviewForm.values.requirement}  cols="30" rows="3 " className='form-control mb-3'></textarea>
-            <button className='btn btn-outline-success w-100' type="submit"> Submit</button>
+            <button className='btn btn-success w-100 my-3' type="submit"> Submit</button>
             </form>
           </div>
         </div>

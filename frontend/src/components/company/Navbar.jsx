@@ -7,7 +7,7 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
   <div className="container-fluid">
     <a className="navbar-brand" href="#">
-      Navbar
+    <img src="../public/logor.png" alt=""  height={80}/>
     </a>
     <button
       className="navbar-toggler"
@@ -23,7 +23,7 @@ const Navbar = () => {
     <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav">
         <li className="nav-item">
-          <NavLink className="nav-link active" aria-current="page" to="addinterview">
+          <NavLink className="nav-link " aria-current="page" to="addinterview">
             Add Interview
           </NavLink>
         </li>
@@ -41,7 +41,7 @@ const Navbar = () => {
         
        
       </ul>
-      <Link className="btn btn-primary mx-4 " to={'/main/browseinterview'}> Browse Interview</Link>
+      <Link className="btn btn-warning mx-4 " style={{borderRadius:'50px'}} to={'/main/browseinterview'}> Browse Interview</Link>
     </div>
   </div>
 </nav>

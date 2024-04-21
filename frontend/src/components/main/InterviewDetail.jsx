@@ -25,7 +25,8 @@ const InterviewDetail = () => {
   const displayDetails = () => {
     if(interviewData!==null){
       return <>
-        <div className="container  col-md-6 d-flex mx-auto align-items-center vh-75  mt-5">
+<div>
+        <div className="container  col-md-6 d-flex mx-auto align-items-center vh-75 pt-5 ">
             <div className="card w-100 " style={{borderRadius:'10px'}}>
              <div className="row p-3">
             <div className="col-md-12 text-secondary">
@@ -83,6 +84,7 @@ const InterviewDetail = () => {
 
             </div>
         </div>
+        </div>
       </>
     }else{
       return <h3>Loading Data, Please Wait ...</h3>
@@ -90,7 +92,7 @@ const InterviewDetail = () => {
   }  
 
   return (
-    <div>
+    <div className='class2'>
         {displayDetails()}
     </div>
   )
